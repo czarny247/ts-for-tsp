@@ -13,7 +13,7 @@ private:
     static int s_VerticesCounter;
     std::vector <Edge*> vEdges;
     bool m_First; //first in solution
-    bool m_Visited;
+    bool m_Visited; //maybe not useful because i'll use std::find to find vert by name
 
 public:
 

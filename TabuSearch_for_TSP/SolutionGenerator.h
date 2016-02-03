@@ -1,18 +1,21 @@
 #ifndef SOLUTIONGENERATOR_H
 #define SOLUTIONGENERATOR_H
-#include "Solution.h"
-
-//enum class WayOfGenerate {SET,RAND}; //only 2 but can implement more later
+#include "AreaOfSolutions.h"
+#include <algorithm>
 
 class SolutionGenerator
 {
 protected:
-    Solution* pSol = nullptr; //maybe solutions container instead of pointer
-
+    std::string m_Name;
+    AreaOfSolutions* pArea = nullptr;
+    static TSPgraph* pGraph; //static because all of generators will make solutions in same graph
+    Solution* pSol = nullptr;
 public:
-    virtual void generateSolution();
-    void pointSolution (Solution& solution); //to edit
+    virtual void generateSolution(TSPgraph& graph) = 0;
     bool checkPosition (int& pos);
 
+    std::string getName() const;
+    void setName(std::string name);
+    void pointGraph(TSPgraph& graph);
 };
 #endif // SOLUTIONGENERATOR_H

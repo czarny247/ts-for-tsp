@@ -7,8 +7,8 @@ class SolutionSetter : public SolutionGenerator
 private:
 
 public:
-    void generateSolution();
-    void pointSolution (Solution& solution);
+    SolutionSetter();
+    void generateSolution(TSPgraph& graph);
 };
 
 

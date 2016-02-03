@@ -11,7 +11,10 @@ SOURCES += main.cpp \
     myXmlContentHandler.cpp \
     Solution.cpp \
     SolutionSetter.cpp \
-    SolutionGenerator.cpp
+    SolutionGenerator.cpp \
+    SolutionRndGen.cpp \
+    UI.cpp \
+    AreaOfSolutions.cpp
 
 HEADERS += \
     TSPgraph.h \
@@ -20,7 +23,10 @@ HEADERS += \
     myXmlContentHandler.h \
     Solution.h \
     SolutionGenerator.h \
-    SolutionSetter.h
+    SolutionSetter.h \
+    SolutionRndGen.h \
+    UI.h \
+    AreaOfSolutions.h
 
 QT += xml
 QT += widgets
